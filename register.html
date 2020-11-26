@@ -1,0 +1,234 @@
+<html>
+<head>
+<title>HTML Table</title>
+
+<script>
+
+function validation()
+{
+    var name = document.forms["RegForm"]["Name1"];
+    var email = document.forms["RegForm"]["Email"];
+    var phone = document.forms["RegForm"]["phone"];
+
+    var pass=  document.forms["RegForm"]["pass"];
+    var cpass= document.forms["RegForm"]["cpass"];
+
+    if (!/^[a-zA-Z]+$/.test(name.value))
+    {
+        window.alert("Please enter your name.");
+        name.focus();
+        return false;
+    }
+
+
+    if (email.value == "")
+    {
+        window.alert("Please enter a valid e-mail address.");
+        email.focus();
+        return false;
+    }
+
+    if (email.value.indexOf("@", 0) < 0)
+    {
+        window.alert("Please enter a valid e-mail address.");
+        email.focus();
+        return false;
+    }
+
+    if (email.value.indexOf(".", 0) < 0)
+    {
+        window.alert("Please enter a valid e-mail address.");
+        email.focus();
+        return false;
+    }
+
+
+    if (!/(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).{6,}/.test(pass.value))
+{
+      alert("Please Enter a valid password");
+      pass.focus();
+      return false;
+    }
+
+    if(pass.value != cpass.value)
+     {
+        alert("Passwords Don't Match");
+        cpass.focus();
+        return false;
+      }
+
+
+    if (!/^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$/.test(phone.value))
+{
+console.log("SCENE");
+ alert("Please enter a valid number");
+      phone.focus();
+      return false;
+}
+
+
+
+    return true;
+
+}
+</script>
+
+<style>
+fieldset{
+position:absolute;
+right:0px;
+border:2px;
+}
+
+form:hover {
+  opacity: 0.8;
+  filter: alpha(opacity=40); /* For IE8 and earlier */
+  background: rgba(0, 151, 19, 0.1) no-repeat;
+}
+
+
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+form {
+  background: rgba(0, 151, 19, 0.1);
+
+   }
+
+    select {
+
+        width: 230px;
+        margin: 6px;
+    }
+
+
+input[type=text]{
+  width: 230px;
+  margin: 6px;
+}
+input[type=email]
+{
+  width: 230px;
+  margin: 6px;
+}
+input[type=password]{
+width: 230px;
+margin: 6px;
+}
+input[type=file]{
+width: 230px;
+margin: 6px;
+}
+input[type=submit] {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 7px 19px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+}
+input[type=reset] {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 7px 19px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+}
+
+
+
+
+
+
+
+
+td{
+  align-content:initial;
+  font-size: 17px;
+}
+
+
+
+
+</style>
+</head>
+<body>
+<img src="fgfg.jpg" alt="Forest" width="1509" height="870">
+
+<div class="top-right">
+<br></br>
+<fieldset style ="width:480px;height:640px;">
+
+<form name="RegForm" action="reg.php" method="post" target="_blank" enctype="multipart/form-data" onsubmit="return validation()">
+
+<table border=0.01 align="center" width="410">
+<caption><h3>Registration form</h3> </caption>
+
+<tr>
+<td>Enter your Name</td>
+<th><input type="text" name="Name1"required></th>
+</tr>
+
+
+
+
+<tr>
+<td><br>Select your DOB</br></td>
+<th><br><input style="width:236px;" type="date" name="dob"required></br></th>
+</tr>
+
+<tr>
+ <td><br>Enter your Mobile</br></td>
+<th><br><input type="text" name="phone"required></br></th>
+</tr>
+<tr>
+<td><br>Enter your Email</br></td>
+<th><br><input type="email" name="Email"required></br></th>
+</tr>
+
+
+<tr>
+<td><br>Enter your username</br></td>
+<th><br><input type="text"  name="uname" required></br></th>
+</tr>
+
+
+<tr>
+<td><br>Enter your password</br></td>
+<th><br><input type="text"  name="pass" required></br></th>
+</tr>
+
+<tr>
+<td><br>Enter Confirm password</br></td>
+<th><br><input type="text"  name="cpass" required></br></th>
+</tr>
+
+
+<tr>
+<th colspan="2" align ="center">
+ <br><input type="checkbox" name="e" value="d" required> Accept terms and conditions  </br>
+</th>
+</tr>
+
+
+
+<tr>
+<th colspan="2" align="center"><br><input type="submit" value="Save My Data">&nbsp; &nbsp;
+<input type="reset" value="Reset Data"></br><br></br>
+</th>
+</tr>
+
+</table>
+</fieldset>
+</form>
+</div>
+
+</body>
+</html>

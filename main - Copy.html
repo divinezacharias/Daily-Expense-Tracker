@@ -1,0 +1,61 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="min.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+</head>
+<body>
+
+<div class="1">
+<center>
+<marquee><h1>Daily Expense Tracker</h1></marquee>
+<h2>Add a new item:</h2>
+<form>
+<table align="center" cellspacing="30">
+
+
+
+  <tr>
+   <th>Type:</th>
+      <td><select name="type">
+          <option value="card">Card</option>
+          <option value="cash">Cash</option>
+          <option value="cryptocoin">Cryptocoin</option>
+          <option value="other">Other</option>
+      </select></td>
+
+
+
+    <th>Name:</th> <td><input type="text" name="item-name" placeholder="What did you spend on?"></td>
+  </tr>
+
+  <tr>
+    <th>Date:</th> <td><input type="date" name="date"></td>
+
+    <th>Amount:</th> <td><input type="number" name="amount" placeholder="How much?"></td>
+  </tr>
+
+</form>
+</table>
+
+<tr><td><input type="button" class="button" value ="Add a new expense"></td><td> <a href="homepage.html"><input type="button" class="button" value ="Back"></a></td> </tr>
+
+<table>
+
+  <tr>
+    <th id="type" class="center">type</th>
+    <td>name</th>
+
+    <th id="date">date</th>
+    <th style="text-align: right" id="amount">amount</th>
+  </tr>
+  <tr id="if-empty">
+    <td colspan="4"><span>Your added items will show up here!</span></td>
+  </tr>
+
+</center>
+</table>
+</div>
+</body>
+</html>
